@@ -72,8 +72,8 @@ def email(day, start, end, subject):
     msg['From'] = 'robert.patryk.grzelak@gmail.com'
     msg['To'] = "robert.patryk.grzelak@gmail.com"
     s = smtplib.SMTP('smtp.mailgun.org', 587)
-    s.login('postmaster@sandbox7869ed4c3baf41c28d93ed01199eebc0.mailgun.org',
-            'd420511ffa1c2a5f1661508f81d2a1c5-46ac6b00-92cbad3b')
+    s.login(os.environ.get("EMAIL_HOST_USER"),
+            os.environ.get("EMAIL_HOST_PASSWORD"))
     s.sendmail(msg['From'], msg['To'], msg.as_string())
     print('Sprawdź email.')
 
