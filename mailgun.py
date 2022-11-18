@@ -9,7 +9,7 @@
 #
 # s = smtplib.SMTP('ubezpieczenia-magro.home.pl:25')
 #
-# s.login('przypomnienia@ubezpieczenia-magro.pl', 'dsrhsR3P')
+# s.login('przypomnienia@...', 'dsrhsR3P')
 # s.sendmail(msg['From'], msg['To'], msg.as_string())
 # s.quit()
 
